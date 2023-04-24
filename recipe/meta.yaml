@@ -17,16 +17,16 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10,<3.11
+    - python >=3.10
     - setuptools-scm
   run:
     - matplotlib-base
     - mrcfile
     - napari
-    - numpy
+    - numpy <=1.23.5  # https://github.com/napari/napari/issues/5484, should be fixed in the next napari release
     - pandas
     - pystardb
-    - python >=3.10,<3.11
+    - python >=3.10
 
 test:
   imports:
