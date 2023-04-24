@@ -1,5 +1,5 @@
 {% set name = "napari-boxmanager" %}
-{% set version = "0.2.9" %}
+{% set version = "0.3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari_boxmanager-{{ version }}.tar.gz
-  sha256: 6e8248c287dc0c81650324e919012d2419d32170824a2e23664719e7de3a987b
+  sha256: 2abecda5779245da21074e2053200579a9cf2926daa7c76753dc8d6a0b90cc26
 
 build:
   noarch: python
@@ -17,16 +17,16 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10,<3.11
+    - python >=3.10
     - setuptools-scm
   run:
     - matplotlib-base
     - mrcfile
     - napari
-    - numpy
+    - numpy <=1.23.5  # https://github.com/napari/napari/issues/5484, should be fixed in the next napari release
     - pandas
     - pystardb
-    - python >=3.10,<3.11
+    - python >=3.10
 
 test:
   imports:
