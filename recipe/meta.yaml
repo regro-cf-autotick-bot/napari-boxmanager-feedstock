@@ -27,6 +27,10 @@ requirements:
     - pandas
     - pystardb >=0.4.2
     - python >=3.10
+    - qtpy
+    - scipy
+    - tifffile
+    - tqdm
 
 test:
   imports:
