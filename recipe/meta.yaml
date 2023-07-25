@@ -40,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - pyqt
 
 about:
   home: https://github.com/MPI-Dortmund/napari-boxmanager
