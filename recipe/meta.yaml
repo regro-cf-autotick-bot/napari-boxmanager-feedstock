@@ -22,7 +22,7 @@ requirements:
   run:
     - matplotlib-base
     - mrcfile
-    - napari
+    - napari >=0.4.18
     - numpy <=1.23.5  # https://github.com/napari/napari/issues/5484, should be fixed in the next napari release
     - pandas
     - pystardb >=0.4.2
