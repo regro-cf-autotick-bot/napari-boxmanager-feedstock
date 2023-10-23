@@ -3,11 +3,13 @@ About napari-boxmanager-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-boxmanager-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/MPI-Dortmund/napari-boxmanager
+Home: https://pypi.org/project/napari-boxmanager
 
 Package license: MPL-2.0
 
 Summary: Particle selection tool for cryo-em
+
+Development: https://github.com/MPI-Dortmund/napari-boxmanager
 
 Current build status
 ====================
