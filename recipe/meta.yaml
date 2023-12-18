@@ -1,5 +1,5 @@
 {% set name = "napari-boxmanager" %}
-{% set version = "0.4.8" %}
+{% set version = "0.4.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari_boxmanager-{{ version }}.tar.gz
-  sha256: 74c1ec9d69cae7a59ac19385e1dd818bbd05dff644a7ec8ad8909c98849c6471
+  sha256: 32843edebe58cd6eb1680a3c36990600dc5dcb7328c0233c66d19d956299d75f
 
 build:
   noarch: python
