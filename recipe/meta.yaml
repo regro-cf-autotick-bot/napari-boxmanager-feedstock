@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "napari-boxmanager" %}
 {% set version = "0.4.8" %}
 
@@ -6,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari_boxmanager-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari_boxmanager-{{ version }}.tar.gz
   sha256: 74c1ec9d69cae7a59ac19385e1dd818bbd05dff644a7ec8ad8909c98849c6471
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - matplotlib-base
@@ -26,7 +27,7 @@ requirements:
     - numpy <=1.23.5   # https://github.com/napari/napari/issues/5484, should be fixed in the next napari release
     - pandas
     - pystardb >=0.4.2
-    - python >=3.10
+    - python >={{ python_min }}
     - qtpy
     - scipy
     - tifffile
@@ -41,6 +42,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/napari-boxmanager
